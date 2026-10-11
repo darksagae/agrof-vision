@@ -25,7 +25,7 @@ CSP = (
 )
 
 app = FastAPI(
-    title="AGROF Vision", version=__version__, docs_url="/api/docs", openapi_url="/api/openapi.json"
+    title="AGRON Vision", version=__version__, docs_url="/api/docs", openapi_url="/api/openapi.json"
 )
 
 

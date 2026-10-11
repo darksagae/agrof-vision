@@ -106,7 +106,7 @@ export default function App() {
             <p className="label-caps">Leaf health screening · OpenCV AI Competition</p>
             <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">Check a leaf in seconds.</h1>
             <p className="mt-3 text-lg text-ink-soft">
-              Snap one leaf. AGROF Vision checks the photo, outlines the leaf and measures yellowing, browning and spots
+              Snap one leaf. AGRON Vision checks the photo, outlines the leaf and measures yellowing, browning and spots
               — with explainable computer vision, not a black box.
             </p>
           </div>
@@ -218,7 +218,7 @@ export default function App() {
 
       <footer className="border-t border-line">
         <p className="mx-auto max-w-7xl px-4 py-6 text-xs text-ink-soft sm:px-6">
-          AGROF Vision · MIT licensed · Screening aid only — not a diagnosis.
+          AGRON Vision · MIT licensed · Screening aid only — not a diagnosis.
         </p>
       </footer>
     </div>
