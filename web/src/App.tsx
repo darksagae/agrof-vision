@@ -111,7 +111,7 @@ export default function App() {
             </p>
           </div>
           <ul className="flex flex-wrap gap-2 text-xs font-semibold">
-            {['Results in under a second', 'Photos never stored', 'Runs locally or on AWS Lambda'].map((t) => (
+            {['Results in seconds', 'Photos never stored', 'Runs locally or on AWS Lambda'].map((t) => (
               <li key={t} className="rounded-full border border-line bg-surface px-3 py-1.5">
                 {t}
               </li>
