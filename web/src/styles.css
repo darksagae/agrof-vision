@@ -4,49 +4,23 @@
   --font-sans: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, Menlo, monospace;
 
-  --color-canvas: #f1f0e8;
+  --color-canvas: #ffffff;
   --color-surface: #ffffff;
-  --color-raised: #f7f6f0;
-  --color-ink: #0f2a20;
-  --color-ink-soft: #53685e;
-  --color-line: #dcdacd;
-  --color-forest: #14563a;
-  --color-forest-strong: #0d3f29;
-  --color-on-forest: #ffffff;
-  --color-lime: #c6ea5d;
-  --color-leaf: #2fa86a;
-  --color-amber: #e3a91f;
+  --color-raised: #f5f5f5;
+  --color-ink: #111111;
+  --color-ink-soft: #5f5f5f;
+  --color-line: #e5e5e5;
+  --color-line-strong: #cfcfcf;
+  --color-brand: #111111;
+  --color-brand-strong: #000000;
+  --color-on-brand: #ffffff;
+  --color-amber: #b7791f;
   --color-rust: #a3522a;
   --color-danger: #c23b22;
-  --color-danger-soft: #fbe7e2;
-  --color-warn-soft: #fbf1d6;
-  --color-ok-soft: #e1f2e6;
-  --color-panel: #0e1f18;
-  --color-panel-ink: #e3efe7;
-  --color-panel-line: #24382f;
+  --color-danger-soft: #fbe9e5;
+  --color-warn-soft: #fbf3dd;
 
-  --shadow-card: 0 1px 2px rgb(15 42 32 / 0.05), 0 12px 32px -18px rgb(15 42 32 / 0.18);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-canvas: #0b1511;
-    --color-surface: #12201a;
-    --color-raised: #182a22;
-    --color-ink: #e4efe8;
-    --color-ink-soft: #95a99e;
-    --color-line: #24372e;
-    --color-forest: #9be07a;
-    --color-forest-strong: #b6ec9b;
-    --color-on-forest: #0b1511;
-    --color-danger: #ff8b73;
-    --color-danger-soft: #3a1c15;
-    --color-warn-soft: #362b10;
-    --color-ok-soft: #142c1e;
-    --color-panel: #08120e;
-    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -18px rgb(0 0 0 / 0.6);
-    color-scheme: dark;
-  }
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -14px rgb(0 0 0 / 0.14);
 }
 
 @layer base {
@@ -54,7 +28,7 @@
     @apply bg-canvas font-sans text-ink antialiased;
   }
   :focus-visible {
-    outline: 3px solid var(--color-leaf);
+    outline: 3px solid var(--color-ink);
     outline-offset: 2px;
   }
   h1,
@@ -72,7 +46,7 @@
     @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-xl px-5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
   }
   .btn-primary {
-    @apply bg-forest text-on-forest hover:bg-forest-strong;
+    @apply bg-brand text-on-brand hover:bg-brand-strong;
   }
   .btn-secondary {
     @apply border border-line bg-surface text-ink hover:bg-raised;

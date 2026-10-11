@@ -5,14 +5,14 @@ import { Viewer } from './viewer'
 const pct = (value: number) => `${Math.round(value * 1000) / 10}%`
 
 const CONDITION_STYLE: Record<string, string> = {
-  'Mostly green': 'text-leaf',
+  'Mostly green': 'text-ink',
   'Some discolouration': 'text-amber',
   'Extensive discolouration': 'text-rust',
   'No leaf detected': 'text-ink-soft',
 }
 
 const STATUS: Record<Status, { icon: typeof CheckCircle2; className: string; label: string }> = {
-  pass: { icon: CheckCircle2, className: 'text-leaf', label: 'Pass' },
+  pass: { icon: CheckCircle2, className: 'text-ink', label: 'Pass' },
   warn: { icon: AlertTriangle, className: 'text-amber', label: 'Check' },
   fail: { icon: XCircle, className: 'text-danger', label: 'Retake' },
 }
@@ -123,7 +123,7 @@ export function Results({
               {finding.level === 'warn' ? (
                 <AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber" aria-hidden="true" />
               ) : (
-                <Info className="mt-0.5 size-4 shrink-0 text-leaf" aria-hidden="true" />
+                <Info className="mt-0.5 size-4 shrink-0 text-ink" aria-hidden="true" />
               )}
               {finding.text}
             </li>

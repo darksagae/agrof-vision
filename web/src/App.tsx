@@ -93,7 +93,7 @@ export default function App() {
               How it works
             </a>
             <span className="flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 font-mono text-xs">
-              <span className={`size-2 rounded-full ${opencv ? 'bg-leaf' : 'bg-line'}`} aria-hidden="true" />
+              <span className={`size-2 rounded-full ${opencv ? 'bg-ink' : 'bg-line'}`} aria-hidden="true" />
               {opencv ? `OpenCV ${opencv}` : 'Connecting…'}
             </span>
           </div>
@@ -164,7 +164,7 @@ export default function App() {
                         onClick={() => setActive(entry)}
                         aria-current={entry === active}
                         className={`w-40 overflow-hidden rounded-2xl border-2 bg-surface text-left ${
-                          entry === active ? 'border-leaf' : 'border-transparent'
+                          entry === active ? 'border-ink' : 'border-transparent'
                         }`}
                       >
                         <img src={entry.analysis.images.overlay} alt="" className="aspect-[4/3] w-full object-cover" />
@@ -186,7 +186,7 @@ export default function App() {
 
         <section id="how" className="mt-24 scroll-mt-6" aria-labelledby="how-title">
           <div className="flex items-center gap-3">
-            <Cpu className="size-6 text-leaf" aria-hidden="true" />
+            <Cpu className="size-6 text-ink" aria-hidden="true" />
             <h2 id="how-title" className="text-3xl font-bold tracking-tight">
               How it works
             </h2>
@@ -198,7 +198,7 @@ export default function App() {
           <ol className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
             {PIPELINE.map(({ title, body, tech }, index) => (
               <li key={title} className="card flex flex-col p-5">
-                <span className="font-mono text-sm font-semibold text-leaf">0{index + 1}</span>
+                <span className="font-mono text-sm font-semibold text-ink">0{index + 1}</span>
                 <h3 className="mt-2 font-semibold">{title}</h3>
                 <p className="mt-2 flex-1 text-sm text-ink-soft">{body}</p>
                 <p className="mt-4 font-mono text-[0.7rem] text-ink-soft">{tech}</p>
@@ -228,7 +228,7 @@ export default function App() {
 function Empty() {
   return (
     <div className="card flex min-h-[28rem] flex-col items-center justify-center p-10 text-center">
-      <span className="grid size-16 place-items-center rounded-2xl bg-raised text-leaf">
+      <span className="grid size-16 place-items-center rounded-2xl bg-raised text-ink">
         <ScanSearch className="size-8" aria-hidden="true" />
       </span>
       <h2 className="mt-5 text-xl font-semibold">2 · Your analysis appears here</h2>
@@ -242,21 +242,21 @@ function Empty() {
 
 function Analysing({ preview, stage }: { preview: string; stage: number }) {
   return (
-    <div className="overflow-hidden rounded-3xl bg-panel text-panel-ink">
-      <div className="relative grid place-items-center bg-black/30 p-3">
+    <div className="overflow-hidden rounded-3xl border border-line bg-surface text-ink shadow-(--shadow-card)">
+      <div className="relative grid place-items-center bg-raised p-3">
         <div className="relative">
           <img src={preview} alt="Photo being analysed" className="max-h-[32rem] w-auto rounded-xl opacity-70" />
-          <div className="scan-line absolute inset-x-0 h-0.5 bg-lime shadow-[0_0_24px_4px_var(--color-lime)]" />
+          <div className="scan-line absolute inset-x-0 h-0.5 bg-brand shadow-[0_0_18px_3px_rgb(255_255_255/0.9)]" />
         </div>
       </div>
       <ol className="grid gap-2 p-5 sm:grid-cols-4">
         {STAGES.map((label, index) => (
           <li
             key={label}
-            className={`flex items-center gap-2 text-sm ${index <= stage ? 'text-panel-ink' : 'text-panel-ink/40'}`}
+            className={`flex items-center gap-2 text-sm ${index <= stage ? 'text-ink' : 'text-ink-soft/60'}`}
           >
             <span
-              className={`size-2 rounded-full ${index < stage ? 'bg-lime' : index === stage ? 'animate-pulse bg-lime' : 'bg-panel-line'}`}
+              className={`size-2 rounded-full ${index < stage ? 'bg-brand' : index === stage ? 'animate-pulse bg-brand' : 'bg-line'}`}
             />
             {label}
           </li>

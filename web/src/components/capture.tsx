@@ -51,10 +51,10 @@ export function Capture({ busy, onFile }: { busy: boolean; onFile: (file: File) 
           if (!busy) take(e.dataTransfer.files)
         }}
         className={`mt-4 flex flex-col items-center rounded-2xl border-2 border-dashed px-5 py-8 text-center transition-colors ${
-          dragging ? 'border-leaf bg-ok-soft' : 'border-line bg-raised'
+          dragging ? 'border-ink bg-raised' : 'border-line bg-raised'
         }`}
       >
-        <span className="grid size-14 place-items-center rounded-2xl bg-forest text-on-forest">
+        <span className="grid size-14 place-items-center rounded-2xl bg-brand text-on-brand">
           <ImageUp className="size-7" aria-hidden="true" />
         </span>
         <p className="mt-4 font-semibold">Drop a photo here</p>
@@ -97,7 +97,7 @@ export function Capture({ busy, onFile }: { busy: boolean; onFile: (file: File) 
               type="button"
               disabled={busy}
               onClick={() => sample(id)}
-              className="group overflow-hidden rounded-2xl border border-line bg-raised text-left transition-colors hover:border-leaf disabled:opacity-50"
+              className="group overflow-hidden rounded-2xl border border-line bg-raised text-left transition-colors hover:border-ink disabled:opacity-50"
             >
               <img
                 src={`/samples/${id}.jpg`}
@@ -115,7 +115,7 @@ export function Capture({ busy, onFile }: { busy: boolean; onFile: (file: File) 
         <ul className="mt-3 grid gap-2.5 text-sm">
           {TIPS.map(({ icon: Icon, text }) => (
             <li key={text} className="flex items-center gap-3">
-              <Icon className="size-4 shrink-0 text-leaf" aria-hidden="true" />
+              <Icon className="size-4 shrink-0 text-ink" aria-hidden="true" />
               {text}
             </li>
           ))}
@@ -123,7 +123,7 @@ export function Capture({ busy, onFile }: { busy: boolean; onFile: (file: File) 
       </div>
 
       <p className="mt-4 flex items-center gap-2 text-xs text-ink-soft">
-        <ShieldCheck className="size-4 shrink-0 text-leaf" aria-hidden="true" />
+        <ShieldCheck className="size-4 shrink-0 text-ink" aria-hidden="true" />
         Photos are analysed in memory and never stored.
       </p>
     </section>

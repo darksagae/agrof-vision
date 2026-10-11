@@ -37,7 +37,7 @@ DISCLAIMER = (
 )
 
 # BGR colours for previews.
-LEAF_EDGE = (91, 232, 196)
+LEAF_EDGE = (255, 255, 255)
 LESION_EDGE = (109, 77, 255)
 TISSUE_COLOURS = {
     1: (106, 168, 47),  # healthy green
